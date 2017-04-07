@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gttrainproject.LoginPageController">
+   <children>
+      <Label layoutX="131.0" layoutY="53.0" prefHeight="49.0" prefWidth="339.0" text="     Welcome to GT Train" textAlignment="CENTER">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="107.0" layoutY="141.0" text="Username">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="107.0" layoutY="210.0" text="Password">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userName" layoutX="259.0" layoutY="143.0" />
+      <Button fx:id="login" layoutX="123.0" layoutY="282.0" mnemonicParsing="false" onAction="#login_button_action" prefHeight="29.0" prefWidth="156.0" text="Login">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="register" layoutX="329.0" layoutY="282.0" mnemonicParsing="false" onAction="#register_button_action" prefHeight="30.0" prefWidth="156.0" text="New user register">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="warning" layoutX="201.0" layoutY="254.0" prefHeight="17.0" prefWidth="231.0" textFill="#e41f1f" />
+      <PasswordField fx:id="password" layoutX="259.0" layoutY="213.0" />
+   </children>
+</AnchorPane>

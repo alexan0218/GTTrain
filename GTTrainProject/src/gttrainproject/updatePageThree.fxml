@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="521.0" prefWidth="879.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gttrainproject.UpdatePageThreeController">
+   <children>
+      <Label layoutX="301.0" layoutY="14.0" text="Update Reservation">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="52.0" text="Current Train Ticket">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="32.0" layoutY="177.0" text="New Departure Date" />
+      <DatePicker fx:id="datePicker" layoutX="174.0" layoutY="172.0" />
+      <Button layoutX="406.0" layoutY="172.0" mnemonicParsing="false" onAction="#searchAvailablity" text="Search Availability" />
+      <Label layoutX="29.0" layoutY="232.0" text="Updated Train Ticket">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="34.0" layoutY="364.0" text="Change Fee">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="34.0" layoutY="395.0" text="Updated Total Cost">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Button fx:id="button_back" layoutX="34.0" layoutY="468.0" mnemonicParsing="false" onAction="#back_button_action" prefHeight="25.0" prefWidth="138.0" text="Back" />
+      <Button fx:id="button_functionality" layoutX="210.0" layoutY="468.0" mnemonicParsing="false" onAction="#functionality_button_action" prefHeight="25.0" prefWidth="138.0" text="Submit" />
+      <TableView fx:id="tableView" layoutX="34.0" layoutY="75.0" prefHeight="84.0" prefWidth="819.0">
+         <columns>
+            <TableColumn fx:id="trainCol" prefWidth="105.0" text="Train" />
+            <TableColumn fx:id="timeCol" prefWidth="75.0" text="Time" />
+            <TableColumn fx:id="departCol" prefWidth="126.0" text="Departs from" />
+            <TableColumn fx:id="arriveCol" prefWidth="142.0" text="Arrive at" />
+            <TableColumn fx:id="classCol" prefWidth="60.0" text="Class" />
+            <TableColumn fx:id="priceCol" prefWidth="57.0" text="Price" />
+            <TableColumn fx:id="baggageNumCol" prefWidth="95.0" text="# of Baggages" />
+            <TableColumn fx:id="nameCol" prefWidth="113.0" text="Passenger Name" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tableView2" layoutX="29.0" layoutY="261.0" prefHeight="84.0" prefWidth="819.0">
+         <columns>
+            <TableColumn fx:id="trainCol2" prefWidth="105.0" text="Train" />
+            <TableColumn fx:id="timeCol2" prefWidth="75.0" text="Time" />
+            <TableColumn fx:id="departCol2" prefWidth="126.0" text="Departs from" />
+            <TableColumn fx:id="arriveCol2" prefWidth="142.0" text="Arrive at" />
+            <TableColumn fx:id="classCol2" prefWidth="60.0" text="Class" />
+            <TableColumn fx:id="priceCol2" prefWidth="57.0" text="Price" />
+            <TableColumn fx:id="baggageNumCol2" prefWidth="95.0" text="# of Baggages" />
+            <TableColumn fx:id="nameCol2" prefWidth="113.0" text="Passenger Name" />
+         </columns>
+      </TableView>
+      <Label layoutX="323.0" layoutY="364.0" text="\$50">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="21.0" layoutX="210.0" layoutY="397.0" opacity="0.4" stroke="BLACK" strokeType="INSIDE" width="138.0" />
+      <Label fx:id="totalCostLabel" layoutX="210.0" layoutY="397.0" prefHeight="21.0" prefWidth="138.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="warning" layoutX="95.0" layoutY="439.0" prefHeight="17.0" prefWidth="487.0" textFill="#e41f1f" />
+   </children>
+</AnchorPane>

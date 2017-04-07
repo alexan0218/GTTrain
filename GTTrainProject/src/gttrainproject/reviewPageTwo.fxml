@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gttrainproject.ReviewPageTwoController">
+   <children>
+      <Label layoutX="221.0" layoutY="40.0" text="View Review">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="46.0" layoutY="111.0" prefHeight="189.0" prefWidth="512.0">
+        <columns>
+          <TableColumn fx:id="rateCol" prefWidth="104.0" text="Rating" />
+          <TableColumn fx:id="commentCol" prefWidth="407.0" text="Comment" />
+        </columns>
+      </TableView>
+      <Button fx:id="back_on_page_two" layoutX="105.0" layoutY="332.0" mnemonicParsing="false" onAction="#back_button_action" text="Back to functionality">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="button_new_search" layoutX="365.0" layoutY="332.0" mnemonicParsing="false" onAction="#newSearch_button_action" prefHeight="29.0" prefWidth="135.0" text="New Search">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="warning" layoutX="192.0" layoutY="309.0" prefHeight="17.0" prefWidth="231.0" textFill="#e41f1f" />
+   </children>
+</AnchorPane>

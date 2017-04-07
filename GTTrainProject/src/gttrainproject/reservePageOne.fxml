@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gttrainproject.ReservePageOneController">
+   <children>
+      <Label layoutX="213.0" layoutY="39.0" text="Search Train">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="109.0" text="Departs From">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Button fx:id="button_select_departure" layoutX="341.0" layoutY="328.0" mnemonicParsing="false" onAction="#select_departure_button_action" prefHeight="25.0" prefWidth="127.0" text="Find Trains" />
+      <ChoiceBox fx:id="departureStations" layoutX="281.0" layoutY="104.0" prefHeight="25.0" prefWidth="174.0" />
+      <DatePicker fx:id="datePicker" layoutX="281.0" layoutY="232.0" />
+      <ChoiceBox fx:id="arrivalStations" layoutX="281.0" layoutY="166.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="85.0" layoutY="168.0" text="Arrives At  ">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="85.0" layoutY="234.0" text="Departure Date">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Button fx:id="back" layoutX="132.0" layoutY="328.0" mnemonicParsing="false" onAction="#back_button_action" prefHeight="25.0" prefWidth="127.0" text="Back" />
+
+      <Label fx:id="warning" layoutX="82.0" layoutY="286.0" prefHeight="17.0" prefWidth="452.0" textAlignment="CENTER" textFill="#e41414" />
+
+   </children>
+</AnchorPane>

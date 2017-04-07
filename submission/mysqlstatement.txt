@@ -1,0 +1,183 @@
+Add School Page:
+"UPDATE CUSTOMER "
+                       + "SET IS_STUDENT = " + true
+                       + " WHERE USERNAME = '" + username + "'"
+
+
+Cancel Page:
+SELECT RESERVATION_ID, IS_CANCELLED, USERNAME from RESERVATION
+
+
+
+UPDATE RESERVATION SET IS_CANCELLED = 1 WHERE RESERVATION_ID = '" + setting.getCurrentReservationID() + "'"
+
+
+"SELECT * FROM RESERVES WHERE RESERVATION_ID = '" + setting.getCurrentReservationID() + "'" + " ORDER BY DEPATURE_DATE"
+
+
+"SELECT TOTAL_COST FROM RESERVATION WHERE RESERVATION_ID = '" + setting.getCurrentReservationID() + "'"
+
+
+Comment Page:
+SELECT TRAIN_NUMBER from TRAINROUTE
+
+
+"INSERT INTO REVIEW "
+                          + " (USERNAME, TRAIN_NUMBER, COMMENT, RATING)"
+                          + " values (?, ?, ?, ?)"
+
+
+CustomerChoosePageContoller:
+"SELECT IS_STUDENT FROM CUSTOMER WHERE USERNAME = '" + setting.getUsername() +"'"
+
+
+LoginPageController:
+SELECT USERNAME from USER
+
+
+"SELECT u1.PASSWORD from USER u1 WHERE '" + userName.getText() + "' = u1.USERNAME"
+
+
+SELECT USERNAME from CUSTOMER
+
+
+
+
+
+
+
+
+
+
+PopularPageController:
+SELECT M, TRAIN_NUMBER, NumReservation FROM (SELECT M, TRAIN_NUMBER, COUNT(*) AS NumReservation FROM (SELECT month(DEPATURE_DATE) AS M, TRAIN_NUMBER FROM (RESERVATION NATURAL JOIN RESERVES) WHERE IS_CANCELLED = 0) AS K GROUP BY M, TRAIN_NUMBER ORDER BY M , NumReservation DESC ) AS ResCount WHERE M =  + thisMonth +  LIMIT 3
+
+
+
+
+RegisterPageController:
+SELECT USERNAME FROM USER
+
+
+SELECT EMAIL FROM CUSTOMER
+
+
+insert into USER "
+                                   + " (USERNAME, PASSWORD)"
+                                   + " values (?,?)"
+
+
+"insert into CUSTOMER "
+                                   + " (USERNAME, EMAIL, IS_STUDENT )"
+                                   + " values (?, ?, ?)"
+
+
+ReservePageOneController:
+SELECT * FROM STATION
+ReservePageTwoController:
+"SELECT s1.TRAIN_NUMBER, s1.DEPARTURE_TIME, s2.ARRIVAL_TIME " +
+                        "FROM STOP s1 JOIN STOP s2 " +
+                        "ON s1.TRAIN_NUMBER = s2.TRAIN_NUMBER " +
+                        "AND s1.NAME = '" + departureStation + "' " +
+                        "AND s2.NAME = '" + arrivalStation + "' "
+
+
+"SELECT t1.1ST_CLASS_PRICE, t1.2ND_CLASS_PRICE " +
+                            "FROM STOP s1 JOIN TRAINROUTE t1 " +
+                            "ON t1.TRAIN_NUMBER = '" + trainNumber + "' "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ReservePageFourController:
+SELECT r.RESERVATION_ID FROM RESERVATION r
+
+
+"insert into RESERVATION "
+                                   + " (RESERVATION_ID, IS_CANCELLED, USERNAME, CARD_NUMBER, TOTAL_COST)"
+                                   + " values (?, ?, ?, ?, ?)"
+
+
+"insert into RESERVES "
+                                   + " (RESERVATION_ID, TRAIN_NUMBER, CLASS, DEPATURE_DATE, PASSENGER_NAME, NUMBER_OF_BAGGAGE, DEPARTS_FROM, ARRIVES_AT)"
+                                   + " values (?, ?, ?, ?, ?, ?, ?, ?)"
+
+
+"SELECT p.CARD_NUMBER FROM PAYMENTINFO p WHERE p.USERNAME = '" + setting.getUsername() +"'"
+
+
+
+
+ReservePageFiveController:
+"insert into PAYMENTINFO "
+                                       + " (USERNAME, CARD_NUMBER, CVV, EXP_DATE, NAME_ON_CARD)"
+                                       + " values (?, ?, ?, ?, ?)"
+
+
+"SELECT CARD_NUMBER, DEPATURE_DATE, IS_CANCELLED FROM RESERVATION NATURAL JOIN RESERVES"
+
+
+"SELECT CARD_NUMBER FROM PAYMENTINFO WHERE USERNAME = '" + setting.getUsername() +"'"
+
+
+RevenuePageController:
+SELECT M, SUM(TOTAL) AS TOTAL FROM (SELECT month(DEPATURE_DATE) AS M, SUM(TOTAL_COST) AS TOTAL FROM (RESERVATION NATURAL JOIN RESERVES AS K) GROUP BY RESERVATION_ID, M) AS L GROUP BY M LIMIT 3
+
+
+ReviewPageOneController:
+SELECT TRAIN_NUMBER from TRAINROUTE
+
+
+ReviewPageTwoController:
+"SELECT RATING, COMMENT FROM REVIEW WHERE TRAIN_NUMBER = '" + setting.getReviewingTrainNum() + "'"
+
+
+
+
+
+
+UpdatePageOneController:
+"SELECT USERNAME, TOTAL_COST, IS_CANCELLED FROM RESERVATION WHERE RESERVATION_ID = '" + resIDLabel.getText() +"'"
+
+
+UpdatePageTwoController:
+
+
+"SELECT * FROM RESERVES WHERE RESERVATION_ID = '" + resID +"'"
+
+
+"SELECT t1.1ST_CLASS_PRICE, t1.2ND_CLASS_PRICE " +
+                        "FROM TRAINROUTE t1 " +
+                        "WHERE t1.TRAIN_NUMBER = '" + r.getTrainNumber() + "' "
+
+
+UpdatePageThreeController:
+"UPDATE RESERVATION "
+                                   + "SET TOTAL_COST=" + updatedCost
+                                   + " WHERE RESERVATION_ID='" + setting.getCurrentReservationID() + "' "
+
+
+ViewTrainPageOneController:
+SELECT TRAIN_NUMBER from TRAINROUTE
+
+
+ViewTrainPageTwoController:
+"SELECT * FROM STOP WHERE TRAIN_NUMBER = '" + setting.getReviewingTrainNum() + "'" + "ORDER BY ARRIVAL_TIME, DEPARTURE_TIME" + ""

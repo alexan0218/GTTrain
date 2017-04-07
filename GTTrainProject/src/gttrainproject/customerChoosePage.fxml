@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gttrainproject.CustomerChoosePageController">
+   <children>
+      <Label layoutX="166.0" layoutY="32.0" text="Choose Functionality">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Button fx:id="button_viewTrainSchedule" layoutX="87.0" layoutY="101.0" mnemonicParsing="false" onAction="#viewSchedule_button_action" prefHeight="31.0" prefWidth="196.0" text="View Train Schedule">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="button_make_reservation" layoutX="87.0" layoutY="157.0" mnemonicParsing="false" onAction="#makeReservation_button_action" text="Make A New Reservation">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="button_update_reservation" layoutX="87.0" layoutY="212.0" mnemonicParsing="false" onAction="#updateReservation_button_action" prefHeight="31.0" prefWidth="196.0" text="Update A Reservation">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="button_view_review" layoutX="331.0" layoutY="101.0" mnemonicParsing="false" onAction="#viewReview_button_action" prefHeight="31.0" prefWidth="196.0" text="View Review">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="button_give_review" layoutX="331.0" layoutY="157.0" mnemonicParsing="false" onAction="#giveReview_button_action" prefHeight="31.0" prefWidth="196.0" text="Give Review">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="button_addStudentInfo" layoutX="331.0" layoutY="212.0" mnemonicParsing="false" onAction="#addStudentInfo_button_action" prefHeight="31.0" prefWidth="196.0" text="Add School Information">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="button_cancel_reservation" layoutX="87.0" layoutY="267.0" mnemonicParsing="false" onAction="#cancelReservation_button_action" prefHeight="31.0" prefWidth="196.0" text="Cancel A Reservation">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="logout" layoutX="331.0" layoutY="267.0" mnemonicParsing="false" onAction="#logout_button_action" prefHeight="31.0" prefWidth="196.0" text="Log out">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

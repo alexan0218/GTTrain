@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gttrainproject.ManagerChoosePageController">
+   <children>
+      <Label layoutX="166.0" layoutY="42.0" text="Choose Functionality">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Button fx:id="button_view_revenue" layoutX="219.0" layoutY="139.0" mnemonicParsing="false" onAction="#revenue_button_action" text="View Revenue Report">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="button_view_popular" layoutX="201.0" layoutY="223.0" mnemonicParsing="false" onAction="#popular_button_action" text="View Popular Route Report">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="logout" layoutX="266.0" layoutY="313.0" mnemonicParsing="false" onAction="#logout_button_action" text="Log out">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

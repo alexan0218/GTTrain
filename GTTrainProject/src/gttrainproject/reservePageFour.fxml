@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="432.0" prefWidth="984.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gttrainproject.ReservePageFourController">
+   <children>
+      <Label layoutX="374.0" layoutY="14.0" text="Make Reservation ">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="57.0" text="Currently Selected ">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="46.0" layoutY="177.0" text="Student Discount Applied " />
+      <Label layoutX="46.0" layoutY="211.0" text="Total Cost">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="46.0" layoutY="249.0" text="Use Card">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <ChoiceBox fx:id="cards" layoutX="174.0" layoutY="244.0" prefWidth="150.0" />
+      <Button fx:id="button_card_info" layoutX="359.0" layoutY="242.0" mnemonicParsing="false" onAction="#card_info_button_action" prefHeight="29.0" prefWidth="158.0" text="Add/Remove Card">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Button fx:id="button_back_search_train" layoutX="359.0" layoutY="207.0" mnemonicParsing="false" onAction="#back_search_train_button_action" text="Contiune Adding a Train">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Button fx:id="button_back_bag_extra" layoutX="46.0" layoutY="341.0" mnemonicParsing="false" onAction="#back_bag_extra_button_action" prefHeight="25.0" prefWidth="139.0" text="Back">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Button fx:id="button_confirmation" layoutX="384.0" layoutY="341.0" mnemonicParsing="false" onAction="#confirmation_button_action" prefHeight="25.0" prefWidth="139.0" text="Submit">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <TableView fx:id="tableView" layoutX="6.0" layoutY="86.0" prefHeight="114.0" prefWidth="970.0">
+        <columns>
+            <TableColumn fx:id="removedCol" prefWidth="65.0" text="Remove" />
+          <TableColumn fx:id="trainCol" prefWidth="60.0" text="Train" />
+          <TableColumn fx:id="timeCol" prefWidth="205.0" text="Time" />
+            <TableColumn fx:id="departCol" prefWidth="139.0" text="Departs From" />
+            <TableColumn fx:id="arriveCol" prefWidth="161.0" text="Arrives At" />
+            <TableColumn fx:id="classCol" prefWidth="72.0" text="Class" />
+            <TableColumn fx:id="priceCol" prefWidth="66.0" text="Price" />
+            <TableColumn fx:id="baggageNumCol" prefWidth="104.0" text="# of baggages" />
+            <TableColumn fx:id="nameCol" minWidth="0.0" prefWidth="97.0" text="Name" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edeff2" height="25.0" layoutX="174.0" layoutY="209.0" opacity="0.39" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+      <Label fx:id="totalCostLabel" layoutX="174.0" layoutY="211.0" prefHeight="21.0" prefWidth="150.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="158.0" layoutY="211.0" prefHeight="21.0" prefWidth="10.0" text="\$">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="warning" layoutX="185.0" layoutY="292.0" prefHeight="17.0" prefWidth="683.0" textFill="#e41f1f" />
+   </children>
+</AnchorPane>

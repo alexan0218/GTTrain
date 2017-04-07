@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gttrainproject.ReservePageThreeController">
+   <children>
+      <Label layoutX="107.0" layoutY="32.0" text="Travel Extras &amp; Passenger Info">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="96.0" layoutY="127.0" text="Number Of Baggages">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <ChoiceBox fx:id="baggageNum" layoutX="355.0" layoutY="127.0" prefHeight="25.0" prefWidth="48.0" />
+      <Label layoutX="96.0" layoutY="218.0" text="Passenger Name">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="passengerName" layoutX="355.0" layoutY="213.0" />
+      <Label layoutX="96.0" layoutY="158.0" text="Every passenger can bring up to 4 baggages. 2 free of charge, 2 for $30 per bag">
+         <font>
+            <Font size="11.0" />
+         </font></Label>
+      <Button fx:id="button_back_select_departure" layoutX="128.0" layoutY="343.0" mnemonicParsing="false" onAction="#back_select_departure_button_action" prefHeight="25.0" prefWidth="111.0" text="Back" />
+      <Button fx:id="button_next_pay" layoutX="352.0" layoutY="343.0" mnemonicParsing="false" onAction="#next_buy_button_action" prefHeight="25.0" prefWidth="111.0" text="Next" />
+
+      <Label fx:id="warning" layoutX="138.0" layoutY="287.0" prefHeight="17.0" prefWidth="325.0" textAlignment="CENTER" textFill="#c62121" />
+
+   </children>
+</AnchorPane>

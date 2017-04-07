@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="461.0" prefWidth="1009.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gttrainproject.CancelPageTwoController">
+   <children>
+      <Label layoutX="384.0" layoutY="22.0" text="Cancel Reservation">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="43.0" layoutY="76.0" prefHeight="184.0" prefWidth="936.0">
+        <columns>
+          <TableColumn fx:id="trainCol" text="Train" />
+          <TableColumn fx:id="departDateCol" prefWidth="185.0" text="Departure Date" />
+            <TableColumn fx:id="departStationCol" prefWidth="124.0" text="Departs from" />
+            <TableColumn fx:id="arrivalStationCol" prefWidth="128.0" text="Arrives at" />
+            <TableColumn fx:id="classCol" prefWidth="82.0" text="Class" />
+            <TableColumn fx:id="bagCol" prefWidth="133.0" text="Number of Baggages" />
+            <TableColumn fx:id="nameCol" prefWidth="203.0" text="Passenger Name" />
+        </columns>
+      </TableView>
+      <Label layoutX="43.0" layoutY="276.0" text="Total Cost of Reservation">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcfcfc" height="21.0" layoutX="290.0" layoutY="278.0" opacity="0.27" stroke="BLACK" strokeType="INSIDE" width="141.0" />
+      <Label layoutX="274.0" layoutY="278.0" text="\$">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalCost" layoutX="290.0" layoutY="278.0" prefHeight="21.0" prefWidth="141.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcfcfc" height="21.0" layoutX="290.0" layoutY="338.0" opacity="0.27" stroke="BLACK" strokeType="INSIDE" width="141.0" />
+      <Label layoutX="274.0" layoutY="338.0" text="\$">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="refund" layoutX="290.0" layoutY="338.0" prefHeight="21.0" prefWidth="141.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="306.0" text="Date of Cancellation">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="338.0" prefHeight="21.0" prefWidth="173.0" text="Amount to be refunded">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcfcfc" height="21.0" layoutX="290.0" layoutY="306.0" opacity="0.27" stroke="BLACK" strokeType="INSIDE" width="141.0" />
+      <Label fx:id="cancelDate" layoutX="290.0" layoutY="306.0" prefHeight="21.0" prefWidth="141.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="back_on_page_two" layoutX="43.0" layoutY="407.0" mnemonicParsing="false" onAction="#backOnPageTwo_button_action" prefHeight="25.0" prefWidth="125.0" text="Back" />
+      <Button fx:id="submit" layoutX="189.0" layoutY="407.0" mnemonicParsing="false" onAction="#submit_button_action" prefHeight="25.0" prefWidth="242.0" text="Submit" />
+      <Label fx:id="warning" layoutX="43.0" layoutY="373.0" prefHeight="17.0" prefWidth="415.0" textAlignment="CENTER" textFill="#e41f1f" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="449.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gttrainproject.ReservePageFiveController">
+   <children>
+      <Button fx:id="button_delete_submit" layoutX="500.0" layoutY="334.0" mnemonicParsing="false" onAction="#delete_submit_button_action" prefHeight="25.0" prefWidth="165.0" text="Submit" />
+      <Button fx:id="button_add_submit" layoutX="117.0" layoutY="334.0" mnemonicParsing="false" onAction="#add_submit_button_action" prefHeight="25.0" prefWidth="165.0" text="Submit" />
+      <ChoiceBox fx:id="removingCards" layoutX="541.0" layoutY="134.0" prefHeight="25.0" prefWidth="189.0" />
+      <Label layoutX="439.0" layoutY="138.0" text="Card Number">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="datePicker" layoutX="187.0" layoutY="261.0" prefHeight="25.0" prefWidth="189.0" />
+      <Label layoutX="438.0" layoutY="91.0" text="Delete Card">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cvv" layoutX="187.0" layoutY="216.0" prefHeight="25.0" prefWidth="54.0" />
+      <TextField fx:id="cardNum" layoutX="187.0" layoutY="174.0" prefHeight="25.0" prefWidth="189.0" />
+      <TextField fx:id="name" layoutX="187.0" layoutY="136.0" prefHeight="25.0" prefWidth="189.0" />
+      <Label layoutX="50.0" layoutY="263.0" text="Expiration Date">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="218.0" text="CVV">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="49.0" layoutY="176.0" text="Card Number">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="49.0" layoutY="138.0" text="Name on Card">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="49.0" layoutY="91.0" text="Add Card">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="23.0" text="Payment Information">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Separator layoutX="398.0" layoutY="79.0" orientation="VERTICAL" prefHeight="206.0" prefWidth="13.0" />
+      <Label fx:id="warning" layoutX="61.0" layoutY="304.0" prefHeight="17.0" prefWidth="642.0" textFill="#e41f1f" />
+      <Button fx:id="back" layoutX="322.0" layoutY="394.0" mnemonicParsing="false" onAction="#back_button_action" prefHeight="25.0" prefWidth="165.0" text="Back" />
+   </children>
+</AnchorPane>

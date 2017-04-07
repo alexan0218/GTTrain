@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gttrainproject.UpdatePageOneController">
+   <children>
+      <Label layoutX="165.0" layoutY="27.0" text="Update Reservation">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="149.0" text="Reservation ID">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <TextField fx:id="resIDLabel" layoutX="195.0" layoutY="149.0" prefHeight="25.0" prefWidth="198.0" />
+      <Button fx:id="button_update_reservation_two" layoutX="441.0" layoutY="149.0" mnemonicParsing="false" onAction="#update_reservation_two_button_action" prefHeight="25.0" prefWidth="103.0" text="Search" />
+      <Button fx:id="button_back" layoutX="222.0" layoutY="308.0" mnemonicParsing="false" onAction="#back_button_action" prefHeight="25.0" prefWidth="156.0" text="Back" />
+      <Label fx:id="warning" layoutX="185.0" layoutY="263.0" prefHeight="17.0" prefWidth="231.0" textFill="#e41f1f" />
+   </children>
+</AnchorPane>

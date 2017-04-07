@@ -1,0 +1,3 @@
+To run the app:
+
+this project is coded in javafx. Decompress GTTrainProject.zip and then double click GTTrainProject.jar to run.

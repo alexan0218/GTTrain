@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gttrainproject.RevenuePageController">
+   <children>
+      <Label layoutX="163.0" layoutY="46.0" text="View Revenue Report">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="223.0" layoutY="116.0" prefHeight="200.0" prefWidth="156.0">
+        <columns>
+          <TableColumn fx:id="monthCol" prefWidth="72.0" text="Month" />
+          <TableColumn fx:id="revenueCol" prefWidth="83.0" text="Revenue" />
+        </columns>
+      </TableView>
+      <Button fx:id="back" layoutX="275.0" layoutY="341.0" mnemonicParsing="false" onAction="#back_button_action" text="Back">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
